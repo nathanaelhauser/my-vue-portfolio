@@ -4,26 +4,32 @@
 
     <!-- Setup a loop of cards -->
     <div class="cards">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://source.unsplash.com/random/400x300" alt="">
-        </div>
-        <div class="card-content">
-          <h3>Card title</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatibus!</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image">
-          <img src="https://source.unsplash.com/random/400x300" alt="">
-        </div>
-        <div class="card-content">
-          <h3>Card title</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatibus!</p>
-        </div>
-      </div>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   </div>
 </template>
+
+<script>
+import Card from "@/components/Card.vue";
+
+export default {
+  components: { Card },
+};
+</script>
+
+<style scoped>
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+</style>
