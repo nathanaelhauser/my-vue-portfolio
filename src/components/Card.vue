@@ -2,8 +2,8 @@
   <div
     class="card"
     :style="{ backgroundImage: `url(${imgSrc})` }"
-    @mouseenter="handleHover"
-    @mouseleave="handleHover"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
   >
     <div class="card-content hidden">
       <h3>{{ title }}</h3>
@@ -39,12 +39,11 @@ export default {
     },
   },
   methods: {
-    handleHover(e) {
-      if (e.type === "mouseenter") {
-        e.target.children[0].className = "card-content";
-      } else if (e.type === "mouseleave") {
-        e.target.children[0].className = "card-content hidden";
-      }
+    handleMouseEnter(e) {
+      e.target.children[0].className = "card-content";
+    },
+    handleMouseLeave(e) {
+      e.target.children[0].className = "card-content hidden";
     },
   },
 };
